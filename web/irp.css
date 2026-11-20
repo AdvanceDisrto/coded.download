@@ -1,0 +1,58 @@
+/* iRp™ v1: rendering and execution UI, complementary to web/styles.css. */
+.irp-section{padding-top:115px}
+.irp-grid{display:grid;grid-template-columns:250px minmax(0,1fr) 267px;gap:14px;align-items:stretch}
+.irp-grid>.panel{min-width:0}
+.irp-author,.irp-exec{padding:20px 18px;display:flex;flex-direction:column;gap:12px}
+.irp-author .panel-heading,.irp-exec .panel-heading{margin-bottom:14px}
+.irp-field-label{font-size:11px;color:#d5f7ed;font-weight:720}
+#irp-prompt{width:100%;resize:vertical;min-height:132px;max-height:260px;border:1px solid rgba(86,222,209,.34);border-radius:11px;padding:13px 12px;color:#e4fafa;background:rgba(1,14,20,.75);font-size:12px;line-height:1.75;outline:0}
+#irp-prompt:focus{border-color:#70ffe4;box-shadow:0 0 0 3px rgba(63,239,217,.1)}
+#irp-prompt::selection{background:#146e6a}
+.irp-help{color:#85a5a9;font-size:10px;line-height:1.6}
+.irp-divider{display:flex;align-items:center;gap:10px;margin-top:7px}
+.irp-divider:before,.irp-divider:after{content:"";flex:1;height:1px;background:var(--line)}
+.irp-divider>span{font-size:8px;color:#6e999a;letter-spacing:.1em;white-space:nowrap}
+.irp-side-actions{display:flex;flex-direction:column;gap:9px}
+.irp-side-actions .btn{width:100%;font-size:11px;min-height:40px}
+.irp-import-label{cursor:pointer;position:relative;text-align:center;font-size:11px;font-weight:730;padding:10px 8px;min-height:40px;border:1px dashed var(--line-hot);border-radius:9px;color:#a5f3e3}
+.irp-import-label:hover{background:rgba(56,226,206,.1)}
+.irp-import-label input{position:absolute;width:1px;height:1px;opacity:0;left:50%;top:50%}
+.irp-import-label:focus-within{outline:2px solid var(--aqua);outline-offset:3px}
+.irp-model-info{display:flex;flex-direction:column;gap:6px;margin-top:auto;padding:15px 0 0;border-top:1px solid var(--line)}
+.irp-model-info strong{font-size:10px;color:#b6fff0;overflow-wrap:anywhere}
+.irp-model-info small{font-size:9px;color:#779b9c;line-height:1.7}
+.irp-viewer{display:flex;flex-direction:column}
+.irp-viewer-head{padding:16px 19px;border-bottom:1px solid var(--line);display:flex;align-items:flex-start;justify-content:space-between;gap:15px}
+.irp-viewer-head h3{font-size:19px;margin:5px 0 5px;letter-spacing:-.04em}
+.irp-viewer-head p{font-size:11px;line-height:1.6;color:#91bbbd;max-width:450px;margin:0}
+.irp-scene-shell{flex:1;display:grid;place-items:center;position:relative;min-height:310px;background:linear-gradient(150deg,rgba(7,58,65,.15),rgba(2,16,24,.89));overflow:hidden}
+#irp-scene{display:block;width:100%;height:auto;min-height:310px;max-height:500px}
+.irp-scene-shell:after{content:"";position:absolute;inset:0;pointer-events:none;border:1px solid rgba(63,229,220,.08);box-shadow:inset 0 0 50px rgba(9,30,42,.45)}
+.irp-viewer-foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:9px;padding:10px 16px;font-size:9px;color:#90b9b8;letter-spacing:.07em;border-top:1px solid var(--line)}
+.irp-viewer-foot span:first-child{color:#7fe9d8}
+.irp-exec-count{border:1px solid var(--line);border-radius:12px;display:flex;align-items:center;justify-content:space-between;padding:15px;background:rgba(13,87,80,.1)}
+.irp-exec-count span{font-size:9px;color:#8ab5b6;letter-spacing:.13em}
+.irp-exec-count strong{font-size:29px;color:var(--mint);letter-spacing:-.06em;line-height:1}
+.irp-plan-kicker{margin-top:12px}
+.irp-plan-line{border-left:2px solid var(--mint);padding:9px 10px;font-size:11px;color:#c4e8e3;background:rgba(43,223,207,.08);line-height:1.6}
+.irp-projection{color:#a9c5c5;min-height:90px;border:1px solid var(--line);padding:13px;border-radius:10px;line-height:1.7;font-size:11px;background:rgba(5,22,27,.6)}
+.irp-exec .btn{width:100%;min-height:44px;font-size:11px;padding-inline:10px}
+.irp-exec .btn:disabled,.irp-author .btn:disabled{opacity:.45;cursor:not-allowed;box-shadow:none;transform:none}
+.irp-export-btn{background:transparent;border:0;color:#70ead9;font-size:11px;text-decoration:underline;text-underline-offset:4px;padding:7px;align-self:center}
+.irp-export-btn:disabled{opacity:.4}
+.irp-exec-warning{border-top:1px solid var(--line);padding-top:13px;margin-top:auto}
+.irp-exec-warning strong{color:#edae98;font-size:9px;letter-spacing:.12em}
+.irp-exec-warning p{font-size:10px;line-height:1.75;color:#87acac;margin-top:7px;margin-bottom:0}
+.irp-bottom-grid{display:grid;grid-template-columns:2fr 1fr;gap:14px;margin-top:14px}
+.irp-districts-panel,.irp-live-status{padding:20px}
+.irp-districts-panel h3{font-size:13px;margin:0}.irp-districts-panel p{font-size:10px;color:#86acaf;margin:5px 0 14px}
+.irp-district-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.irp-district-row{padding:11px;border:1px solid var(--line);border-radius:9px;background:rgba(19,65,64,.21);min-width:0}
+.irp-district-row strong{font-size:11px;display:block;color:#defaf4;overflow-wrap:anywhere}
+.irp-district-row span{display:block;color:#86b1b3;font-size:9px;margin-top:3px;text-transform:capitalize}
+.irp-live-status{border-color:rgba(70,240,216,.28);background:linear-gradient(140deg,rgba(7,65,60,.67),rgba(6,25,29,.82))}
+#irp-status{font-size:12px;color:#d0fff1;line-height:1.65;min-height:50px;margin:12px 0}
+.irp-live-status small{color:#83b2b0;font-size:10px;line-height:1.6;display:block}
+@media(max-width:1250px){.irp-grid{grid-template-columns:220px minmax(0,1fr)}.irp-exec{grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;gap:15px}.irp-exec .panel-heading{grid-column:1/-1;margin:0}.irp-exec-warning{margin:0}.irp-exec-count{grid-column:1}.irp-plan-kicker{grid-column:2;align-self:end}.irp-plan-line{grid-column:2}.irp-projection{grid-column:1/-1;min-height:55px}.irp-exec .btn{grid-column:1}.irp-export-btn{grid-column:2;grid-row:5}.irp-exec-warning{grid-column:2;grid-row:6/8}}
+@media(max-width:800px){.irp-grid,.irp-bottom-grid{grid-template-columns:1fr}.irp-author,.irp-exec{display:flex;grid-column:auto}.irp-scene-shell{min-height:260px}.irp-district-list{grid-template-columns:repeat(2,minmax(0,1fr))}.irp-section{padding-top:85px}}
+@media(max-width:500px){.irp-viewer-head h3{font-size:17px}.irp-viewer-head{padding:14px}.irp-district-list{grid-template-columns:1fr 1fr;gap:6px}.irp-districts-panel,.irp-live-status{padding:15px}.irp-district-row{padding:8px}.irp-scene-shell{min-height:190px}#irp-scene{min-height:210px}.irp-viewer-foot{font-size:8px}}

@@ -1,3 +1,4 @@
+import {initIrpUi} from "./irp-ui.mjs";
 import {advance, initialWorld, summarizeJournalText, MAX_JOURNAL_BYTES} from "./civilization.mjs";
 
 const el = id => document.getElementById(id);
@@ -118,3 +119,19 @@ fileInput.addEventListener("change",async()=>{
 });
 
 render();
+
+initIrpUi({
+  getWorld:()=>({...state.world}),
+  commitWorld:(next,execution)=>{
+    if(execution?.evidence_state!=="UNSIGNED_BROWSER_EXECUTION"||
+      execution?.tick_before!==state.world.tick||
+      next.tick!==state.world.tick+1)
+      throw new Error("IRP_EXECUTION_CONTRACT_REJECTED");
+    state.world={...next};
+    state.history.push({...next});
+    if(state.history.length>500)state.history.shift();
+    render();
+    setAnnouncement("iRp v1 advanced fictional world by one tick; UNSIGNED browser execution.");
+  }
+});
+

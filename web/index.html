@@ -9,6 +9,7 @@
   <title>CODED™ Civilization | CODED.download</title>
   <link rel="icon" href="./assets/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./irp.css">
   <script type="module" src="./app.js"></script>
 </head>
 <body>
@@ -26,6 +27,7 @@
     <nav aria-label="Main navigation" class="site-nav">
       <a href="#overview" class="is-current">Overview</a>
       <a href="#console">Civilization</a>
+      <a href="#irp">iRp Runtime</a>
       <a href="#evidence">Evidence</a>
       <a href="#architecture">Architecture</a>
     </nav>
@@ -41,6 +43,7 @@
       <p class="hero-lead">CODED™ Civilization is a synthetic world engine for exploring coordination, resource allocation and evidence-gated intelligence — grounded in deterministic software, not fictional claims of live-world control.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#console"><span aria-hidden="true">▸</span> Explore civilization <span aria-hidden="true">↗</span></a>
+        <a class="btn btn-ghost" href="#irp"><span aria-hidden="true">✧</span> Open iRp Runtime</a>
         <a class="btn btn-ghost" href="#evidence"><span aria-hidden="true">◇</span> Evidence boundaries</a>
       </div>
       <div class="hero-foot">
@@ -121,8 +124,55 @@
       </aside>
     </div>
   </section>
+  <section class="irp-section shell" id="irp" aria-labelledby="irp-section-title">
+    <div class="section-header">
+      <div><div class="overline"><span>02</span> / EXECUTION &amp; RENDERING</div>
+        <h2 id="irp-section-title">iRp™ v1 <em>World Runtime.</em></h2>
+        <p>CODED proposes a fictional civilization. iRp validates the blueprint, renders its geometry, previews a bounded scenario, and executes only after explicit approval.</p>
+      </div>
+      <div class="section-status"><span class="status-led led-cyan"></span> LOCAL / SYNTHETIC <span class="status-alt">· MODEL OUTPUT UNATTESTED</span></div>
+    </div>
+    <div class="irp-grid">
+      <aside class="panel irp-author">
+        <div class="panel-heading"><div class="heading-symbol">✧</div><div><h3>World Architect</h3><p>CODED™ model → structured blueprint</p></div></div>
+        <label class="irp-field-label" for="irp-prompt">Describe a fictional civilization</label>
+        <textarea id="irp-prompt" rows="6" maxlength="600" spellcheck="true">Create an ocean civilization with a central civic tower, community gardens, a medical district, solar energy, habitats, and a harbor transit network.</textarea>
+        <button type="button" id="irp-generate" class="btn btn-primary btn-wide">✦ Generate with CODED™</button>
+        <small class="irp-help">Requires opt-in local iRp server + installed CODED model. The public/static preview uses no inference endpoint.</small>
+        <div class="irp-divider"><span>OR USE OFFLINE BLUEPRINT</span></div>
+        <div class="irp-side-actions">
+          <button type="button" id="irp-sample" class="btn btn-ghost">Load sample world</button>
+          <label class="irp-import-label" for="irp-import">Import JSON blueprint<input type="file" id="irp-import" accept=".json,application/json"></label>
+        </div>
+        <div class="irp-model-info"><span class="small-kicker">PINNED LOCAL MODEL</span><strong>advancedistroadmin/CODED:v1.0.0</strong><small>Model name is not weight attestation. Licensing and provenance require separate review.</small></div>
+      </aside>
+      <div class="panel irp-viewer">
+        <div class="irp-viewer-head">
+          <div><span class="small-kicker">iRp™ SCENE / DETERMINISTIC VECTOR</span><h3 id="irp-title">Aurelia · The Ocean Citadel</h3><p id="irp-summary">A fictional island civilization.</p></div>
+          <span class="chip chip-muted" id="irp-theme">OCEAN</span>
+        </div>
+        <div class="irp-scene-shell"><svg id="irp-scene" viewBox="0 0 900 485" role="img" aria-label="CODED iRp fictional city rendering"></svg></div>
+        <div class="irp-viewer-foot"><span id="irp-source">BUILT-IN DEMO BLUEPRINT</span><span>RENDERED DATA ≠ REAL-WORLD TELEMETRY</span></div>
+      </div>
+      <aside class="panel irp-exec">
+        <div class="panel-heading"><div class="heading-symbol">⇢</div><div><h3>Execution gate</h3><p>Preview · approve · simulate</p></div></div>
+        <div class="irp-exec-count"><span>VALIDATED DISTRICTS</span><strong id="irp-count">6</strong></div>
+        <div class="small-kicker irp-plan-kicker">PROPOSED SCENARIO</div>
+        <div class="irp-plan-line" id="irp-plan">Aid 8 · Diplomacy 0.65 · Comms online</div>
+        <div class="irp-projection" id="irp-projection">Blueprint preview has not been executed.</div>
+        <button type="button" class="btn btn-ghost btn-wide" id="irp-preview">Preview scenario</button>
+        <button type="button" class="btn btn-primary btn-wide" id="irp-execute" disabled>Approve &amp; Execute one tick</button>
+        <button type="button" class="irp-export-btn" id="irp-export">↓ Export blueprint JSON</button>
+        <div class="irp-exec-warning"><strong>UNSIGNED BROWSER EXECUTION</strong><p>Execution changes only synthetic browser memory. It does not run model-supplied code, control devices, or mint a cryptographic receipt.</p></div>
+      </aside>
+    </div>
+    <div class="irp-bottom-grid">
+      <div class="panel irp-districts-panel"><div><h3>Districts in scene</h3><p>Validated sector labels and geometric structures</p></div><div id="irp-district-list" class="irp-district-list"></div></div>
+      <div class="panel irp-live-status"><span class="small-kicker">iRp RUNTIME LOG</span><div id="irp-status" aria-live="polite">Ready. No real-world execution.</div><small>Execution requires a fresh preview of the exact current world state. The current UI is not a signed receipt verifier.</small></div>
+    </div>
+  </section>
   <section class="evidence-section shell" id="evidence" aria-labelledby="evidence-title">
-    <div class="section-header"><div><div class="overline"><span>02</span> / PROVENANCE</div><h2 id="evidence-title">Evidence <em>without exaggeration.</em></h2><p>Separate what the software executed, what was signed, and what remains unverified.</p></div></div>
+    <div class="section-header"><div><div class="overline"><span>03</span> / PROVENANCE</div><h2 id="evidence-title">Evidence <em>without exaggeration.</em></h2><p>Separate what the software executed, what was signed, and what remains unverified.</p></div></div>
     <div class="evidence-grid">
       <div class="panel evidence-hero">
         <div class="evidence-hero-top"><span class="evidence-emblem">◇</span><div><span class="small-kicker">INTEGRITY FIRST</span><h3>The proof boundary</h3></div><span class="chip chip-muted">LOCAL SOFTWARE</span></div>
@@ -144,7 +194,7 @@
     </div>
   </section>
   <section class="architecture-section shell" id="architecture" aria-labelledby="architecture-title">
-    <div class="section-header"><div><div class="overline"><span>03</span> / INTELLIGENCE FABRIC</div><h2 id="architecture-title">One ecosystem. <em>Clear trust boundaries.</em></h2><p>Designed to evolve from local simulation into verifiable coordination, with every capability identified by its actual maturity.</p></div></div>
+    <div class="section-header"><div><div class="overline"><span>04</span> / INTELLIGENCE FABRIC</div><h2 id="architecture-title">One ecosystem. <em>Clear trust boundaries.</em></h2><p>Designed to evolve from local simulation into verifiable coordination, with every capability identified by its actual maturity.</p></div></div>
     <div class="architecture-grid">
       <article class="arch-card"><span class="arch-num">01</span><span class="arch-icon">⬡</span><h3>Civilization Engine</h3><p>Bounded fictional world-state simulation with deterministic replay and adjustable scenario inputs.</p><span class="arch-tag">IMPLEMENTED · LOCAL</span></article>
       <article class="arch-card"><span class="arch-num">02</span><span class="arch-icon">∞</span><h3>Buddy i™ + iMCP</h3><p>Operator-hosted authenticated local inference and bounded compute with independently checked software receipts.</p><span class="arch-tag">LOCAL INTEGRATION</span></article>
