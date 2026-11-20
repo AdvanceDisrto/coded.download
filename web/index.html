@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#061015">
+  <meta name="description" content="CODED™ Civilization — an evidence-first synthetic world engine by iNNOVULiS. Explore deterministic local simulation, coordination concepts and honest verification boundaries.">
+  <title>CODED™ Civilization | CODED.download</title>
+  <link rel="icon" href="./assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#console">Skip to civilization console</a>
+<div class="ambient ambient-a" aria-hidden="true"></div>
+<div class="ambient ambient-b" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="shell nav-shell">
+    <a class="brand" href="#overview" aria-label="CODED.download home">
+      <img src="./assets/mark.svg" width="42" height="42" alt="">
+      <span><strong>CODED</strong><span class="brand-domain">.download</span></span>
+    </a>
+    <div class="brand-divider" aria-hidden="true"></div>
+    <span class="brand-ecosystem"><span class="infinity-icon" aria-hidden="true">∞</span> iNNOVULiS ecosystem</span>
+    <nav aria-label="Main navigation" class="site-nav">
+      <a href="#overview" class="is-current">Overview</a>
+      <a href="#console">Civilization</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#architecture">Architecture</a>
+    </nav>
+    <a href="#console" class="nav-action">Open console <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+<main>
+  <section class="hero shell" id="overview" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> THE iNNOVULiS INTELLIGENCE ECOSYSTEM <span class="eyebrow-dot"></span> LOCAL PROTOTYPE</div>
+      <div class="hero-version">CIVILIZATION ENGINE <span class="slash">//</span> V0.1</div>
+      <h1 id="hero-title">Design the future.<br><span>Prove the process.</span></h1>
+      <p class="hero-lead">CODED™ Civilization is a synthetic world engine for exploring coordination, resource allocation and evidence-gated intelligence — grounded in deterministic software, not fictional claims of live-world control.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#console"><span aria-hidden="true">▸</span> Explore civilization <span aria-hidden="true">↗</span></a>
+        <a class="btn btn-ghost" href="#evidence"><span aria-hidden="true">◇</span> Evidence boundaries</a>
+      </div>
+      <div class="hero-foot">
+        <div><span class="status-led led-cyan" aria-hidden="true"></span> SYNTHETIC WORLD</div>
+        <div><span class="line-mini" aria-hidden="true"></span> MODEL-DRIVEN PROTOTYPE</div>
+        <div><span class="line-mini" aria-hidden="true"></span> RECEIPT-READY DESIGN</div>
+      </div>
+    </div>
+    <div class="hero-stage" aria-label="Stylized fictional civilization under a holographic grid and data dome">
+      <div class="stage-cross stage-cross-a" aria-hidden="true">+</div>
+      <div class="stage-cross stage-cross-b" aria-hidden="true">+</div>
+      <div class="stage-ring stage-ring-one" aria-hidden="true"></div>
+      <div class="stage-ring stage-ring-two" aria-hidden="true"></div>
+      <img class="city-image" src="./assets/civilization.svg" alt="Illustrated fictional futuristic city within a cyan holographic civilization dome">
+      <div class="stage-float stage-top"><span class="mini-glyph">⬡</span><span>OMEGA SANDBOX<br><small>01 / FICTIONAL WORLD</small></span></div>
+      <div class="stage-float stage-bottom"><span class="pulse-dot" aria-hidden="true"></span><span>DETERMINISTIC ENGINE<br><small>NO LIVE WORLD FEED</small></span></div>
+      <div class="stage-caption">FIG 01 <span>—</span> SYNTHETIC CIVILIZATION MODEL</div>
+    </div>
+  </section>
+  <div class="marquee-rule shell" aria-hidden="true"><span>COORDINATE</span><b>✦</b><span>SIMULATE</span><b>✦</b><span>MEASURE</span><b>✦</b><span>VERIFY</span></div>
+  <section class="console-section shell" id="console" aria-labelledby="console-title">
+    <div class="section-header">
+      <div><div class="overline"><span>01</span> / INTERACTIVE PROTOTYPE</div><h2 id="console-title">Civilization <em>control</em></h2><p>Interact with the actual bounded rules of CODED's Python world-state engine, mirrored locally in the browser.</p></div>
+      <div class="section-status"><span class="status-led led-cyan"></span> SYNTHETIC SIMULATION <span class="status-alt">· NO LIVE OPERATIONS</span></div>
+    </div>
+    <div class="console-grid">
+      <aside class="panel control-panel" aria-label="Simulation parameters">
+        <div class="panel-heading"><div class="heading-symbol">☷</div><div><h3>Scenario controls</h3><p>Operator sandbox</p></div></div>
+        <div class="control-group">
+          <label for="aid">Aid units / step <output id="aid-value" for="aid">4</output></label>
+          <input id="aid" type="range" min="0" max="100" value="4" step="1">
+          <div class="range-label"><span>0</span><span>100</span></div>
+        </div>
+        <div class="control-group">
+          <label for="diplomacy">Diplomacy <output id="diplomacy-value" for="diplomacy">0.50</output></label>
+          <input id="diplomacy" type="range" min="0" max="1" value="0.5" step="0.05">
+          <div class="range-label"><span>0.00</span><span>1.00</span></div>
+        </div>
+        <label class="toggle-row" for="disruption"><span><strong>Disrupt communications</strong><small>Simulated scenario input</small></span><input type="checkbox" id="disruption"><span class="toggle-ui" aria-hidden="true"></span></label>
+        <div class="subheading">SECTOR LAYERS <span>INTERFACE CONCEPT</span></div>
+        <div class="sector-list" role="group" aria-label="Visualization layer">
+          <button class="sector-option active" type="button" data-sector="Population" aria-pressed="true"><span class="sector-symbol">◉</span> Population <span class="sector-indicator">●</span></button>
+          <button class="sector-option" type="button" data-sector="Health" aria-pressed="false"><span class="sector-symbol">✚</span> Health <span class="sector-indicator">●</span></button>
+          <button class="sector-option" type="button" data-sector="Energy" aria-pressed="false"><span class="sector-symbol">ϟ</span> Energy <span class="sector-indicator">●</span></button>
+          <button class="sector-option" type="button" data-sector="Agriculture" aria-pressed="false"><span class="sector-symbol">♧</span> Agriculture <span class="sector-indicator">●</span></button>
+          <button class="sector-option" type="button" data-sector="Transport" aria-pressed="false"><span class="sector-symbol">↗</span> Transport <span class="sector-indicator">●</span></button>
+        </div>
+        <div class="control-actions"><button class="btn btn-primary btn-wide" id="run-step" type="button">Advance one tick <span aria-hidden="true">↗</span></button><button class="reset-btn" id="reset" type="button">↺ Reset scenario</button></div>
+      </aside>
+      <div class="console-main">
+        <div class="panel world-panel">
+          <div class="world-toolbar"><div><span class="panel-icon">⬡</span><strong>OMEGA_SANDBOX</strong><span class="world-subtitle">Fictional simulation region</span></div><span class="chip"><span class="status-led led-cyan"></span> LOCAL MODEL</span></div>
+          <div class="world-map" id="world-map" data-sector="Population">
+            <div class="map-axes"><span>Y / 0.0</span><span>X / 1.0</span></div>
+            <div class="world-shine" aria-hidden="true"></div>
+            <img src="./assets/civilization.svg" alt="" aria-hidden="true">
+            <div class="map-point point-a"><span>01</span></div><div class="map-point point-b"><span>02</span></div><div class="map-point point-c"><span>03</span></div>
+            <div class="map-insight"><span class="small-kicker">ACTIVE LAYER</span><strong id="selected-sector">Population</strong><small>Visual overlay · not sector telemetry</small></div>
+            <div class="map-coordinates">SIMULATION / TICK <strong id="map-tick">0000</strong></div>
+          </div>
+          <div class="world-foot"><span><span class="status-led led-cyan"></span> SYNTHETIC · DETERMINISTIC</span><span>NO GEOSPATIAL OR SENSOR DATA</span></div>
+        </div>
+        <div class="metric-grid" aria-label="Current world state">
+          <article class="metric-card"><span>01 / WELLBEING</span><div class="metric-value"><strong id="wellbeing">35.00</strong><small>/ 100</small></div><div class="meter"><span id="wellbeing-meter" style="width:35%"></span></div><small>Community wellbeing index</small></article>
+          <article class="metric-card"><span>02 / CRISIS INDEX</span><div class="metric-value"><strong id="crisis">65.00</strong><small>/ 100</small></div><div class="meter meter-coral"><span id="crisis-meter" style="width:65%"></span></div><small>Fictional stress indicator</small></article>
+          <article class="metric-card"><span>03 / SUPPLY</span><div class="metric-value"><strong id="supply">100</strong><small>units</small></div><div class="meter"><span id="supply-meter" style="width:100%"></span></div><small>Remaining synthetic inventory</small></article>
+          <article class="metric-card"><span>04 / COMMS</span><div class="metric-value metric-small"><strong id="communications">ONLINE</strong></div><div class="meter"><span id="communications-meter" style="width:100%"></span></div><small>Boolean simulation flag</small></article>
+        </div>
+      </div>
+      <aside class="console-right">
+        <div class="panel cycle-panel">
+          <div class="panel-heading"><div class="heading-symbol">⌁</div><div><h3>Simulation trace</h3><p>Local, unanchored computation</p></div><span class="chip chip-muted">TICK <b id="tick">0</b></span></div>
+          <div class="chart"><div class="chart-top"><span>WELLBEING INDEX</span><strong id="chart-current">35.00</strong></div><svg id="history-chart" role="img" aria-label="Wellbeing history chart" viewBox="0 0 320 136" preserveAspectRatio="none"><path class="chart-grid" d="M0 20H320 M0 65H320 M0 110H320"/><path id="chart-fill" d="M0 96 L320 96 L320 136 L0 136Z"/><path id="chart-line" d="M0 96 L320 96"/></svg><div class="chart-bottom"><span>START</span><span>SIMULATION STEPS →</span></div></div>
+          <div class="trace-row"><span>Engine</span><strong>Deterministic v0.1</strong></div><div class="trace-row"><span>Input model</span><strong>Bounded scenario</strong></div><div class="trace-row"><span>Execution</span><strong>Local browser</strong></div><div class="trace-row"><span>Evidence status</span><strong class="warning-text">NOT SIGNED</strong></div>
+          <div id="announcement" class="trace-foot" aria-live="polite">Ready to advance the fictional world.</div>
+        </div>
+        <div class="insight-card"><span class="insight-glyph">✧</span><div><span class="small-kicker">DESIGN PRINCIPLE</span><p>Simulation is a model. A receipt is evidence of recorded bytes. Neither certifies real-world truth.</p></div></div>
+      </aside>
+    </div>
+  </section>
+  <section class="evidence-section shell" id="evidence" aria-labelledby="evidence-title">
+    <div class="section-header"><div><div class="overline"><span>02</span> / PROVENANCE</div><h2 id="evidence-title">Evidence <em>without exaggeration.</em></h2><p>Separate what the software executed, what was signed, and what remains unverified.</p></div></div>
+    <div class="evidence-grid">
+      <div class="panel evidence-hero">
+        <div class="evidence-hero-top"><span class="evidence-emblem">◇</span><div><span class="small-kicker">INTEGRITY FIRST</span><h3>The proof boundary</h3></div><span class="chip chip-muted">LOCAL SOFTWARE</span></div>
+        <div class="evidence-ladder">
+          <div class="ladder-row"><span class="ladder-index">01</span><div><strong>Deterministic simulation</strong><small>Repeatable software state · synthetic inputs</small></div><span class="ladder-status state-demo">SIMULATED</span></div>
+          <div class="ladder-row"><span class="ladder-index">02</span><div><strong>Local model and compute</strong><small>Available in operator-hosted Buddy environment</small></div><span class="ladder-status state-operator">HOST ONLY</span></div>
+          <div class="ladder-row"><span class="ladder-index">03</span><div><strong>Software-signed receipts</strong><small>Verification requires trusted keys and chain checks</small></div><span class="ladder-status state-demo">VERIFY LOCALLY</span></div>
+          <div class="ladder-row"><span class="ladder-index">04</span><div><strong>Hardware and external anchoring</strong><small>Not established by this prototype</small></div><span class="ladder-status state-unavailable">NOT CONFIGURED</span></div>
+        </div>
+        <div class="evidence-note"><span>!</span> This public UI does not read local Buddy secrets or claim a remotely verified live ledger.</div>
+      </div>
+      <div class="panel import-panel">
+        <div class="panel-heading"><div class="heading-symbol">⇧</div><div><h3>Local receipt viewer</h3><p>Browser-only · no upload</p></div></div>
+        <p class="import-description">Inspect a copy of your JSONL journal locally. This viewer <strong>does not verify signatures</strong>; use your trusted CLI verifier for cryptographic integrity.</p>
+        <label class="upload-zone" for="journal-file"><span class="upload-icon">⇪</span><strong>Choose evidence.jsonl</strong><small>Read locally in this browser · max 4 MiB</small><input type="file" id="journal-file" accept=".jsonl,.json,text/plain"></label>
+        <div class="import-results" id="import-results" aria-live="polite"><span class="status-led led-muted"></span> No local journal selected. Nothing has been verified.</div>
+        <div class="import-rows" id="import-rows" role="list"></div>
+      </div>
+    </div>
+  </section>
+  <section class="architecture-section shell" id="architecture" aria-labelledby="architecture-title">
+    <div class="section-header"><div><div class="overline"><span>03</span> / INTELLIGENCE FABRIC</div><h2 id="architecture-title">One ecosystem. <em>Clear trust boundaries.</em></h2><p>Designed to evolve from local simulation into verifiable coordination, with every capability identified by its actual maturity.</p></div></div>
+    <div class="architecture-grid">
+      <article class="arch-card"><span class="arch-num">01</span><span class="arch-icon">⬡</span><h3>Civilization Engine</h3><p>Bounded fictional world-state simulation with deterministic replay and adjustable scenario inputs.</p><span class="arch-tag">IMPLEMENTED · LOCAL</span></article>
+      <article class="arch-card"><span class="arch-num">02</span><span class="arch-icon">∞</span><h3>Buddy i™ + iMCP</h3><p>Operator-hosted authenticated local inference and bounded compute with independently checked software receipts.</p><span class="arch-tag">LOCAL INTEGRATION</span></article>
+      <article class="arch-card"><span class="arch-num">03</span><span class="arch-icon">◇</span><h3>Evidence Ledger</h3><p>Ed25519 software signatures and hash-linked receipts; key custody and anchoring are separate future work.</p><span class="arch-tag">SOFTWARE EVIDENCE</span></article>
+      <article class="arch-card"><span class="arch-num">04</span><span class="arch-icon">⤨</span><h3>Cross-sector CIH</h3><p>Coordination, adaptive middleware, federated edge systems and physical integration remain design-stage objectives.</p><span class="arch-tag">ROADMAP</span></article>
+    </div>
+    <div class="architecture-bottom"><span>CODED™ CIVILIZATION <span class="slash">//</span> ENGINEERING PREVIEW</span><a href="#overview">Back to top ↑</a></div>
+  </section>
+</main>
+<footer class="site-footer"><div class="shell footer-inner"><span><strong>CODED</strong>.download <span class="footer-dash">—</span> POWERED BY THE i ECOSYSTEM</span><span>TECHNOLOGY SHOULD SERVE HUMANITY.</span><span>© CODED™ · LOCAL REFERENCE PROTOTYPE</span></div></footer>
+</body>
+</html>
