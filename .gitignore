@@ -11,3 +11,6 @@ Intermediate/
 Saved/
 DerivedDataCache/
 .imcp/
+
+# Local-only CIH / iRp HDR outputs and demo keys (NEVER COMMIT)
+.cih/
