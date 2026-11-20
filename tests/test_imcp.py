@@ -88,7 +88,7 @@ class MCPProtocolTests(unittest.TestCase):
 
     def test_tools_resources_prompts_discovery(self):
         self.init()
-        self.assertEqual(len(self.req(2, "tools/list")["result"]["tools"]), 4)
+        self.assertEqual(len(self.req(2, "tools/list")["result"]["tools"]), 7)
         self.assertEqual(len(self.req(3, "resources/list")["result"]["resources"]), 2)
         self.assertEqual(len(self.req(4, "prompts/list")["result"]["prompts"]), 1)
 
