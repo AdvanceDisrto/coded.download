@@ -106,7 +106,7 @@ def _rpc_result(id: Any, result: dict) -> dict:
 
 
 def _tool_result(data: dict, *, error: bool = False) -> dict:
-    return {"content": [{"type": "text", "text": json.dumps(data, sort_keys=True, ensure_ascii=False, allow_nan=False)}],
+    return {"content": [{"type": "text", "text": json.dumps(data, sort_keys=True, ensure_ascii=True, allow_nan=False)}],
             "structuredContent": data, "isError": error}
 
 
@@ -201,7 +201,7 @@ def main() -> None:
                 LOGGER.exception("Uncaught protocol error")
                 response = _rpc_error(None, -32603, "Internal error")
         if response is not None:
-            sys.stdout.write(json.dumps(response, sort_keys=True, ensure_ascii=False, allow_nan=False) + "\n")
+            sys.stdout.write(json.dumps(response, sort_keys=True, ensure_ascii=True, allow_nan=False) + "\n")
             sys.stdout.flush()
 
 
