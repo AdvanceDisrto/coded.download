@@ -79,6 +79,9 @@ def cih_status(args: dict) -> dict:
         "buddy_chat_operator_enabled": os.environ.get("INNOVULIS_BUDDY_ENABLE_CHAT") == "1",
         "buddy_compute_operator_enabled": os.environ.get("INNOVULIS_BUDDY_ENABLE_COMPUTE") == "1",
         "hardware_attestation": "NOT_CONFIGURED",
+        "irp_hdr_operator_enabled": os.environ.get("INNOVULIS_IRP_ENABLE_HDR") == "1",
+        "irp_hdr_engine": "PINNED_LOCAL_CPU_REFERENCE_ONLY",
+        "irp_hdr_attestation": "NOT_IMPLEMENTED",
         "cloudflare_access": "NOT_EXPOSED_BY_IMCP",
         "external_actions_enabled": False,
         "signing_configured": bool(os.environ.get("INNOVULIS_IMCP_SIGNING_KEY_PATH")),
@@ -128,6 +131,7 @@ def verify_signed_receipt(args: dict) -> dict:
 
 
 from imcp.buddy_bridge import buddy_status, buddy_chat, buddy_dispatch  # noqa: E402
+from imcp.irp_hdr_bridge import hdr_status, hdr_preview, hdr_dispatch  # noqa: E402
 
 
 TOOL_HANDLERS = {
@@ -138,4 +142,7 @@ TOOL_HANDLERS = {
     "cih_buddy_status": buddy_status,
     "cih_buddy_chat": buddy_chat,
     "cih_buddy_dispatch_matmul": buddy_dispatch,
+    "cih_irp_hdr_status": hdr_status,
+    "cih_irp_hdr_preview": hdr_preview,
+    "cih_irp_hdr_dispatch": hdr_dispatch,
 }
