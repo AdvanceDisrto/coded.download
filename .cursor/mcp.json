@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "cloudflare": {
+      "url": "https://mcp.cloudflare.com/mcp"
+    },
+    "innovulis-imcp": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "scripts\\run-imcp.cmd"
+      ],
+      "env": {
+        "INNOVULIS_IMCP_SIGNING_KEY_PATH": ".imcp/issuer-private.pem",
+        "INNOVULIS_IMCP_TRUST_STORE_PATH": ".imcp/trust-store.json"
+      }
+    }
+  }
+}

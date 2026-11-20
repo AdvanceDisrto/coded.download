@@ -27,3 +27,7 @@ On macOS/Linux, replace `.\\.venv\\Scripts\\python.exe` with `.venv/bin/python`.
 - `docs/ARCHITECTURE.md` — roadmap through Civilization 6.0 and test/security limits.
 
 No live GPS, personal biometrics, weapons control, payment actions, proprietary game assets, AI consciousness or software self-modification are implemented.
+
+## iMCP local bridge
+
+The [`imcp/`](imcp/) package implements the initial **local-only iNNOVULIS CIH MCP server** using standard JSON-RPC stdio. See [`docs/IMCP.md`](docs/IMCP.md) for operator instructions and security boundaries, or configure Cursor with [`.cursor/mcp.json`](.cursor/mcp.json) and VS Code with [`.vscode/mcp.json`](.vscode/mcp.json). There is no default Cloudflare Tunnel or public HTTP listener. Existing CODED WebSocket port `8765` is not an MCP endpoint.
