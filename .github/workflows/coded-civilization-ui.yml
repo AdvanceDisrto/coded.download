@@ -1,0 +1,27 @@
+name: CODED Civilization Frontend
+on:
+  pull_request:
+    paths:
+      - 'web/**'
+      - '.github/workflows/coded-civilization-ui.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'web/**'
+      - '.github/workflows/coded-civilization-ui.yml'
+permissions:
+  contents: read
+jobs:
+  ui:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check browser module syntax
+        run: |
+          node --check web/app.js
+          node --check web/civilization.mjs
+      - name: Run deterministic UI safety tests
+        run: node --test web/tests/*.test.mjs
