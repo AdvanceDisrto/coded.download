@@ -49,6 +49,24 @@ TOOLS = [
      "inputSchema": _schema({"n": {"type": "integer", "minimum": 16, "maximum": 512},
                              "resident": {"type": "boolean"}, "audit": {"type": "boolean"}}, ["n"]),
      "outputSchema": {"type": "object"}},
+    {"name": "cih_irp_hdr_status",
+     "description": "Inspect operator-enabled pinned iRp v1.1.3 local CPU HDR configuration. No NVIDIA attestation, no dispatch.",
+     "inputSchema": _schema({}), "outputSchema": {"type": "object"}},
+    {"name": "cih_irp_hdr_preview",
+     "description": "Preview bounded local HDR reference sphere render; emits a plan digest without side effects. Hardware-required requests fail closed.",
+     "inputSchema": _schema({"width": {"type": "integer", "minimum": 64, "maximum": 1280},
+                             "height": {"type": "integer", "minimum": 64, "maximum": 720},
+                             "frame": {"type": "integer", "minimum": 0, "maximum": 100000},
+                             "require_hardware": {"type": "boolean"}}), "outputSchema": {"type": "object"}},
+    {"name": "cih_irp_hdr_dispatch",
+     "description": "Explicitly approved, operator-enabled iRp CPU HDR output. Checks pinned source, AES+EXR audit, then signs a CIH software evidence link. No hardware attestation.",
+     "inputSchema": _schema({"width": {"type": "integer", "minimum": 64, "maximum": 1280},
+                             "height": {"type": "integer", "minimum": 64, "maximum": 720},
+                             "frame": {"type": "integer", "minimum": 0, "maximum": 100000},
+                             "require_hardware": {"type": "boolean"},
+                             "approved": {"type": "boolean", "const": True},
+                             "preview_sha256": {"type": "string", "minLength": 64, "maxLength": 64}},
+                            ["approved", "preview_sha256"]), "outputSchema": {"type": "object"}},
 ]
 
 RESOURCES = [
@@ -61,7 +79,7 @@ RESOURCE_DATA = {
         "centralized": ["enterprise databases", "APIs", "orchestration"],
         "cih": ["aggregation", "adaptive middleware (planned)", "cross-sector optimization (planned)"],
         "decentralized": ["edge nodes (planned)", "mesh (planned)", "federated AI (planned)"],
-        "actual_code": ["bounded synthetic simulation", "software-signed local receipts", "MCP stdio adapter"],
+        "actual_code": ["bounded synthetic simulation", "software-signed local receipts", "MCP stdio adapter", "operator-gated iRp local CPU HDR dispatch"],
     },
     "imcp://limitations": {
         "provenance": "LOCAL_PROTOTYPE_NOT_HARDWARE_ATTESTED",
@@ -69,6 +87,8 @@ RESOURCE_DATA = {
         "no_external_actions": True,
         "no_auto_dns_or_cloudflare_changes": True,
         "no_real_world_data_or_certified_factual_claims": True,
+        "irp_hdr_hardware_attestation": "NOT_IMPLEMENTED",
+        "irp_hdr_reference_scene": "CPU_SPHERE_NOT_CODED_BLUEPRINT",
     },
 }
 PROMPTS = [
