@@ -75,7 +75,9 @@ def cih_status(args: dict) -> dict:
         "schema": "innovulis.imcp.status.v1",
         "cih_state": "LOCAL_PROTOTYPE_ONLY",
         "world_state": "SYNTHETIC_SIMULATION",
-        "model_inference": "NOT_CONNECTED",
+        "model_inference": "LOCAL_BUDDY_BRIDGE_OPT_IN" if os.environ.get("INNOVULIS_BUDDY_ENABLE_CHAT") == "1" else "NOT_CONNECTED",
+        "buddy_chat_operator_enabled": os.environ.get("INNOVULIS_BUDDY_ENABLE_CHAT") == "1",
+        "buddy_compute_operator_enabled": os.environ.get("INNOVULIS_BUDDY_ENABLE_COMPUTE") == "1",
         "hardware_attestation": "NOT_CONFIGURED",
         "cloudflare_access": "NOT_EXPOSED_BY_IMCP",
         "external_actions_enabled": False,
@@ -125,9 +127,15 @@ def verify_signed_receipt(args: dict) -> dict:
             "does_not_prove": ["Factual accuracy", "Physical execution", "Model identity", "Sensor accuracy"]}
 
 
+from imcp.buddy_bridge import buddy_status, buddy_chat, buddy_dispatch  # noqa: E402
+
+
 TOOL_HANDLERS = {
     "cih_status": cih_status,
     "cih_simulate_step": simulate_step,
     "cih_mint_software_receipt": mint_software_receipt,
     "cih_verify_receipt": verify_signed_receipt,
+    "cih_buddy_status": buddy_status,
+    "cih_buddy_chat": buddy_chat,
+    "cih_buddy_dispatch_matmul": buddy_dispatch,
 }

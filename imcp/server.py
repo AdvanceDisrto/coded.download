@@ -36,6 +36,19 @@ TOOLS = [
                              "sequence": {"type": "integer", "minimum": 0}}, ["payload", "device_label", "sequence"]), "outputSchema": {"type": "object"}},
     {"name": "cih_verify_receipt", "description": "Check an Ed25519 receipt against the configured local trust store; unknown keys fail closed.",
      "inputSchema": _schema({"receipt": {"type": "object"}}, ["receipt"]), "outputSchema": {"type": "object"}},
+    {"name": "cih_buddy_status",
+     "description": "Probe explicitly configured local Buddy HTTP health. Does not verify authentication or inference.",
+     "inputSchema": _schema({}), "outputSchema": {"type": "object"}},
+    {"name": "cih_buddy_chat",
+     "description": "Operator-enabled real local Buddy chat. Independently verify signed receipt and journal before releasing a reply; no global/physical claims.",
+     "inputSchema": _schema({"message": {"type": "string", "minLength": 1, "maxLength": 4096},
+                             "mode": {"type": "string", "enum": ["chat", "code", "plan"]}}, ["message"]),
+     "outputSchema": {"type": "object"}},
+    {"name": "cih_buddy_dispatch_matmul",
+     "description": "Operator-enabled bounded real Buddy compute dispatch: n=16..512 float32 matmul; checked software receipt and ledger. No remote hardware claim.",
+     "inputSchema": _schema({"n": {"type": "integer", "minimum": 16, "maximum": 512},
+                             "resident": {"type": "boolean"}, "audit": {"type": "boolean"}}, ["n"]),
+     "outputSchema": {"type": "object"}},
 ]
 
 RESOURCES = [

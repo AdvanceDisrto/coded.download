@@ -54,3 +54,8 @@ Optional beta CLI (only if wanted): `npm install -g cf`, followed by `cf auth lo
 A signature proves the payload's bytes were signed by a key that matches a preconfigured public key. It does not independently prove the sensor measured a fact, the payload came from ESP32 hardware, AI actually generated content, AI originality, legal title or physical execution. The private key generated here is **not** HSM/SE050-backed. No truth certification, quantum-resistant signature, or patent legal opinion is offered.
 
 This minimal in-repository JSON-RPC MCP server was tested with synthetic stdio fixtures; broad client certification and a security audit remain pending. No use of the newer MCP 2026 protocol version is asserted.
+
+
+## Buddy i local CIH bridge (v0.2)
+
+The optional real Buddy tools (`cih_buddy_status`, `cih_buddy_chat`, and `cih_buddy_dispatch_matmul`) are documented in [IMCP_BUDDY_BRIDGE.md](IMCP_BUDDY_BRIDGE.md). They require explicit loopback configuration and opt-in before invoking a local model or measured compute. Replies are withheld until their Ed25519 receipt and local hash-chained journal are independently verified. No public ingress, blockchain anchoring, or hardware attestation is implied.
