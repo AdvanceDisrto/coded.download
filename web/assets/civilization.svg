@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 570" role="img" aria-labelledby="title desc">
+<title id="title">CODED Civilization — holographic fictional city</title>
+<desc id="desc">An original, stylized fictional city surrounded by a luminous teal data dome, orbital paths and layered waterways. This is a visualization, not geographic or operational data.</desc>
+<defs>
+ <radialGradient id="aura"><stop stop-color="#0de8d3" stop-opacity=".23"/><stop offset=".58" stop-color="#00b7c9" stop-opacity=".07"/><stop offset="1" stop-color="#00f8e9" stop-opacity="0"/></radialGradient>
+ <radialGradient id="ground"><stop stop-color="#155c66"/><stop offset=".57" stop-color="#0b3d47"/><stop offset=".84" stop-color="#07323c"/><stop offset="1" stop-color="#04151f"/></radialGradient>
+ <linearGradient id="sea" x2="1" y2=".3"><stop stop-color="#033243"/><stop offset=".45" stop-color="#008d97"/><stop offset=".65" stop-color="#24cfb4"/><stop offset="1" stop-color="#032e3d"/></linearGradient>
+ <linearGradient id="lightbeam" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#2de5d7" stop-opacity=".8"/><stop offset="1" stop-color="#5cffff" stop-opacity="0"/></linearGradient>
+ <linearGradient id="buildingFront" x1="0" x2=".8" y1=".9" y2=".15"><stop stop-color="#062c3d"/><stop offset=".55" stop-color="#126071"/><stop offset=".92" stop-color="#36bbc8"/><stop offset="1" stop-color="#7ff4f3"/></linearGradient>
+ <linearGradient id="buildingSide" x1="0" x2="1"><stop stop-color="#092936"/><stop offset=".6" stop-color="#062232"/><stop offset="1" stop-color="#20586a"/></linearGradient>
+ <linearGradient id="buildingTop" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6bf6d5"/><stop offset="1" stop-color="#078c98"/></linearGradient>
+ <linearGradient id="dome" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2affd6" stop-opacity=".3"/><stop offset=".36" stop-color="#43f7ff" stop-opacity=".08"/><stop offset=".78" stop-color="#17dbfd" stop-opacity=".24"/><stop offset="1" stop-color="#51ffe5" stop-opacity=".05"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="5"/></filter>
+ <filter id="soft"><feGaussianBlur stdDeviation="14"/></filter>
+ <filter id="tiny"><feGaussianBlur stdDeviation="2"/></filter>
+ <pattern id="glass" width="11" height="12" patternUnits="userSpaceOnUse"><rect width="2" height="5" x="3" y="3" fill="#9afaff" opacity=".33"/></pattern>
+ <g id="tower">
+   <polygon points="0,5 26,-9 49,1 25,15" fill="url(#buildingTop)" stroke="#90fcf0" stroke-width=".7"/>
+   <path d="M0 5L25 15V101L0 90Z" fill="url(#buildingFront)" stroke="#34b8c1" stroke-width=".8"/>
+   <path d="M25 15L49 1V86L25 101Z" fill="url(#buildingSide)" stroke="#2297a5" stroke-width=".8"/>
+   <path d="M7 21V85M14 25V89M21 30V92M31 20V88M39 15V83" stroke="#42e0d9" opacity=".32" stroke-width="1"/>
+   <path d="M4 31L22 38M4 45L22 52M4 60L22 68M4 75L22 81M29 37L45 28M29 53L45 44M29 68L45 59" stroke="#97faff" opacity=".17" stroke-width=".75"/>
+ </g>
+ <g id="spike">
+  <path d="M0 9L15 0L26 6L12 15Z" fill="#6ae8db"/>
+  <path d="M0 9L12 15V120L0 114Z" fill="url(#buildingFront)" stroke="#4cffff" stroke-width=".7"/>
+  <path d="M12 15L26 6V108L12 120Z" fill="url(#buildingSide)" stroke="#2892ac" stroke-width=".7"/>
+  <path d="M2 32L11 36M2 49L11 53M2 66L11 70M2 84L11 88M2 101L11 105" stroke="#8dfbff" opacity=".5"/>
+  <path d="M13 31L25 23M13 46L25 38M13 61L25 53M13 76L25 68M13 92L25 84" stroke="#33b8c5" opacity=".65"/>
+ </g>
+</defs>
+<ellipse cx="455" cy="298" rx="420" ry="244" fill="url(#aura)"/>
+<g opacity=".6" fill="none" stroke-width="1">
+ <ellipse cx="450" cy="374" rx="421" ry="92" stroke="#34d8de" stroke-dasharray="4 12" transform="rotate(-4 450 374)"/>
+ <ellipse cx="455" cy="300" rx="398" ry="233" stroke="#20adba" stroke-dasharray="2 10" opacity=".48"/>
+ <ellipse cx="450" cy="350" rx="358" ry="74" stroke="#5dffe0" opacity=".56"/>
+ <ellipse cx="449" cy="349" rx="452" ry="64" stroke="#45bfd7" stroke-dasharray="4 6" opacity=".7" transform="rotate(9 449 349)"/>
+ <path d="M68 342Q448 -18 830 340" stroke="#35fbea" opacity=".53"/>
+ <path d="M116 348Q452 25 784 348" stroke="#51c6dd" opacity=".55"/>
+ <path d="M200 337Q446 55 698 335" stroke="#73f8e4" opacity=".31"/>
+ <path d="M433 102Q360 227 444 346Q526 208 459 102" stroke="#1bbcca" opacity=".3"/>
+ <path d="M320 115Q300 245 315 344M578 115Q602 242 578 342" stroke="#1bbcca" opacity=".2"/>
+</g>
+<path d="M92 341A363 240 0 0 1 808 341Z" fill="url(#dome)" opacity=".35"/>
+<g opacity=".65" stroke="#33d4e4" fill="none" stroke-width=".65">
+  <path d="M96 270Q447 180 804 268" opacity=".37"/><path d="M116 221Q451 151 785 219" opacity=".31"/><path d="M158 178Q448 135 738 180" opacity=".3"/>
+  <path d="M112 305Q457 226 786 306" opacity=".32"/>
+  <path d="M237 136Q282 231 251 333M674 140Q616 221 653 330" opacity=".25"/>
+</g>
+<ellipse cx="450" cy="380" rx="390" ry="118" fill="#07c9d8" opacity=".13" filter="url(#soft)"/>
+<ellipse cx="450" cy="400" rx="355" ry="108" fill="url(#ground)" stroke="#2bf2e6" stroke-opacity=".54" stroke-width="1.6"/>
+<ellipse cx="450" cy="400" rx="345" ry="99" fill="none" stroke="#58f7df" opacity=".2" stroke-dasharray="5 8"/>
+<path d="M108 403C175 351 273 344 316 378C350 406 389 430 451 417C519 403 558 341 639 356C712 370 778 402 784 421" stroke="#78ffe6" stroke-width="22" opacity=".11" fill="none" filter="url(#soft)"/>
+<path d="M108 403C175 351 273 344 316 378C350 406 389 430 451 417C519 403 558 341 639 356C712 370 778 402 784 421" stroke="url(#sea)" stroke-width="16" fill="none" opacity=".9"/>
+<path d="M115 407C179 357 267 349 316 382C350 409 389 432 451 419C519 407 555 346 637 359C713 372 773 406 784 422" stroke="#63fff8" stroke-width="1.4" fill="none" opacity=".76"/>
+<g opacity=".6" stroke="#4ffed9" fill="none">
+ <path d="M140 397Q300 337 453 414Q609 332 760 404" stroke-width="1.6" opacity=".55"/>
+ <path d="M155 432Q320 371 461 437Q639 374 731 440" stroke-width="1.1" opacity=".42"/>
+ <path d="M174 359L304 442M226 338L381 463M681 349L569 472M748 401L608 459" stroke-width=".7" stroke-dasharray="3 7" opacity=".2"/>
+</g>
+<ellipse cx="449" cy="362" rx="219" ry="69" fill="#14576a" opacity=".76"/>
+<ellipse cx="449" cy="360" rx="217" ry="66" fill="none" stroke="#3fccc6" opacity=".33"/>
+<g opacity=".77">
+  <use href="#tower" transform="translate(190 316) scale(.6)"/>
+  <use href="#tower" transform="translate(226 288) scale(.83)"/>
+  <use href="#spike" transform="translate(266 276) scale(.78)"/>
+  <use href="#tower" transform="translate(302 253) scale(.9)"/>
+  <use href="#tower" transform="translate(327 292) scale(.61)"/>
+  <use href="#spike" transform="translate(356 227) scale(1.12)"/>
+  <use href="#tower" transform="translate(386 253) scale(.7)"/>
+  <use href="#spike" transform="translate(509 228) scale(.98)"/>
+  <use href="#tower" transform="translate(538 258) scale(.88)"/>
+  <use href="#spike" transform="translate(582 280) scale(.7)"/>
+  <use href="#tower" transform="translate(613 294) scale(.75)"/>
+  <use href="#tower" transform="translate(659 322) scale(.62)"/>
+</g>
+<g opacity=".91">
+ <use href="#tower" transform="translate(269 331) scale(.54)"/>
+ <use href="#tower" transform="translate(326 320) scale(.78)"/>
+ <use href="#spike" transform="translate(376 295) scale(.65)"/>
+ <use href="#tower" transform="translate(425 302) scale(.63)"/>
+ <use href="#tower" transform="translate(490 298) scale(.79)"/>
+ <use href="#tower" transform="translate(566 319) scale(.64)"/>
+</g>
+<g>
+ <path d="M444 328L430 317L430 191L449 178L468 192L468 320L450 331Z" fill="url(#buildingFront)" stroke="#4af8f0" stroke-width="1.2"/>
+ <path d="M448 178L448 98L452 98L452 178" fill="url(#lightbeam)"/>
+ <path d="M434 189L449 180L464 190L450 200Z" fill="url(#buildingTop)"/>
+ <path d="M450 201L464 192V321L450 331Z" fill="url(#buildingSide)"/>
+ <path d="M435 209L446 216M435 225L446 230M435 243L446 249M435 264L446 270M435 281L446 287M435 300L446 304" stroke="#a1ffff" stroke-width="1.3" opacity=".78"/>
+ <path d="M452 217L461 211M452 236L461 230M452 254L461 248M452 272L461 266M452 288L461 283" stroke="#4ce9e9" stroke-width="1"/>
+ <path d="M450 90L451 178" stroke="#cafffb" stroke-width="1.8" opacity=".85"/>
+ <path d="M450 80V5" stroke="#4ffff8" stroke-width="1.2" opacity=".22"/>
+ <path d="M447 174V40H453V174" fill="#5fffee" opacity=".3" filter="url(#soft)"/>
+</g>
+<g opacity=".8">
+  <use href="#spike" transform="translate(114 374) scale(.48)"/>
+  <use href="#tower" transform="translate(156 396) scale(.45)"/>
+  <use href="#spike" transform="translate(202 419) scale(.44)"/>
+  <use href="#tower" transform="translate(257 427) scale(.37)"/>
+  <use href="#tower" transform="translate(310 407) scale(.5)"/>
+  <use href="#spike" transform="translate(352 419) scale(.43)"/>
+  <use href="#tower" transform="translate(395 425) scale(.55)"/>
+  <use href="#tower" transform="translate(462 430) scale(.48)"/>
+  <use href="#spike" transform="translate(507 427) scale(.52)"/>
+  <use href="#tower" transform="translate(556 413) scale(.46)"/>
+  <use href="#spike" transform="translate(625 397) scale(.49)"/>
+  <use href="#tower" transform="translate(680 383) scale(.41)"/>
+  <use href="#tower" transform="translate(728 378) scale(.35)"/>
+</g>
+<path d="M160 400Q275 472 421 436Q569 398 747 421" fill="none" stroke="#57eae0" stroke-width="4" opacity=".13" filter="url(#glow)"/>
+<path d="M144 403Q270 482 430 440Q560 396 758 416" fill="none" stroke="#51f6de" stroke-width="1.1" opacity=".7"/>
+<ellipse cx="450" cy="435" rx="320" ry="76" fill="none" stroke="#30bdc6" stroke-width="2" opacity=".58"/>
+<ellipse cx="449" cy="435" rx="364" ry="91" fill="none" stroke="#4deae2" stroke-dasharray="3 7" opacity=".4"/>
+<g fill="#6bffec">
+ <circle cx="139" cy="351" r="2.4"/><circle cx="216" cy="234" r="1.7"/><circle cx="702" cy="238" r="2.1"/><circle cx="790" cy="351" r="2.3"/><circle cx="281" cy="477" r="2.4"/><circle cx="684" cy="467" r="1.7"/>
+ <circle cx="73" cy="300" r="1.6"/><circle cx="821" cy="270" r="1.6"/><circle cx="562" cy="129" r="1.8"/><circle cx="339" cy="135" r="1.3"/>
+</g>
+<g fill="none" stroke="#53f8e0" stroke-width=".6" opacity=".5">
+ <circle cx="139" cy="351" r="7"/><circle cx="790" cy="351" r="7"/><circle cx="281" cy="477" r="7"/>
+ <path d="M0 349H81M817 350H900M451 0V48M44 255L74 300M828 268L859 236"/>
+</g>
+<path d="M450 88L450 348" stroke="#62ffe6" stroke-opacity=".09" stroke-width="42" filter="url(#soft)"/>
+</svg>
