@@ -59,3 +59,8 @@ This minimal in-repository JSON-RPC MCP server was tested with synthetic stdio f
 ## Buddy i local CIH bridge (v0.2)
 
 The optional real Buddy tools (`cih_buddy_status`, `cih_buddy_chat`, and `cih_buddy_dispatch_matmul`) are documented in [IMCP_BUDDY_BRIDGE.md](IMCP_BUDDY_BRIDGE.md). They require explicit loopback configuration and opt-in before invoking a local model or measured compute. Replies are withheld until their Ed25519 receipt and local hash-chained journal are independently verified. No public ingress, blockchain anchoring, or hardware attestation is implied.
+
+
+## CIH-gated iRp HDR bridge (v1.1.3)
+
+A strictly local, operator-enabled iRp CPU HDR bridge adds three stdio MCP tools: cih_irp_hdr_status, cih_irp_hdr_preview, and cih_irp_hdr_dispatch. These require an explicitly installed and SHA-pinned iRp v1.1.3 runtime, a validated preview digest, a positive approval flag and a configured **CIH software signer already present in the local trust store**. The bridge verifies the OpenEXR, encrypted copy and nested software receipt, then creates a separate CIH signature linking approved parameters to the EXR SHA-256 hash. This does NOT prove NVIDIA hardware attestation, CUDA rendering, CODED model origin, or a real-world scene. See [CIH_IRP_HDR_BRIDGE.md](CIH_IRP_HDR_BRIDGE.md) for Windows instructions and trust boundaries.
